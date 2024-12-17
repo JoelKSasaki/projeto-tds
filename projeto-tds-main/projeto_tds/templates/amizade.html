@@ -1,0 +1,33 @@
+{% extends "menu.html"%}
+
+{%block content%}
+    <h4 class="topic">Amizades</h4>
+    <a href="/nova-amizade">
+        <input type="button" class="amigos" value="Adicionar amigos">
+    </a>
+    {% if amizades %}
+    {% for amizade in amizades %}
+        <div class="amizadesatuais">
+            <table>    
+                <tr>
+                    <td>
+                        <figure>
+                            <img src="./static/user.png" alt="1" class="user" title="usuario">
+                        </figure>
+                    </td>
+                    <td class="mane">
+                        <p>{{amizade.username}}</p>
+                    </td>
+                    <td class="time">
+                        <p>
+                            <figure>
+                                <img src="./static/escudos/{{amizade.time}}.png" alt="" class="time">
+                            </figure>
+                        </p>
+                    </td>
+                </tr>    
+            </table>
+        </div>
+    {% endfor %}
+    {% endif %}
+{% endblock %}

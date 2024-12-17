@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/stylish.css">
+</head>
+<body>
+    <form action="/user-cadastro" method="POST" autocomplete="off">
+        <div class="u">
+            <h4>Olá! Por favor, finalize seu cadastro para desfrutar dos Meus Bolões.</h4>
+
+            <p class="group"><label for="usuario">Nome de usuário</label></p>
+            <input size="60" minlength="7" maxlength="30" type="text" name="usuario" id="usuario">
+            
+            
+            <p class="group"><label for="time">Time de torcida</label></p>
+            <input size="60" height="10" minlength="3" maxlength="50" type="text" name="time" id="time">
+
+            <br>
+            <br>
+
+            <label for="foto">Foto (opcional):</label>
+            <label for="foto">
+                <img src="./static/upload.png"  class="upload-icon" alt="1">
+            </label>
+            <input type="file" id="foto" hidden>
+
+            <br>
+            <div class="usermane">
+                <input type="submit" value="Desfrutar" class="botoes" href="index.html">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
